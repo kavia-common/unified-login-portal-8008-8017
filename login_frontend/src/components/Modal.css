@@ -1,0 +1,72 @@
+.modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17,24,39,0.45);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  animation: fadeIn 250ms ease both;
+  z-index: 50;
+}
+
+.modal__card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transform: translateY(10px);
+  animation: slideIn 250ms ease both;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.modal__close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6B7280;
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.modal__close:hover {
+  color: #111827;
+  transform: scale(1.05);
+}
+
+.modal__body {
+  padding: 18px;
+}
+
+.modal__footer {
+  padding: 14px 18px;
+  background: #F9FAFB;
+  border-top: 1px solid #F3F4F6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}

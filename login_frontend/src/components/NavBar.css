@@ -1,0 +1,121 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(249,250,251,1));
+  backdrop-filter: blur(6px);
+  padding: 12px 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.nav__left, .nav__center, .nav__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav__center {
+  justify-content: center;
+}
+
+.nav__right {
+  justify-content: flex-end;
+}
+
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: opacity 200ms ease;
+}
+
+.nav__brand:hover { opacity: 0.9; }
+
+.nav__brandLogo {
+  font-size: 20px;
+}
+
+.nav__brandText {
+  font-size: 16px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  transition: all 200ms ease;
+}
+
+.nav__link:hover {
+  background: rgba(37,99,235,0.08);
+  color: #0f3dbf;
+}
+
+.nav__link.active {
+  background: #2563EB;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+.nav__user {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.nav__userName {
+  color: #111827;
+  font-weight: 600;
+  display: none;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.btn--primary {
+  background: #2563EB;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn--primary:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: #E5E7EB;
+  color: #111827;
+}
+
+.btn--ghost:hover {
+  background: #F3F4F6;
+}
+
+@media (min-width: 640px) {
+  .nav__userName { display: inline; }
+}
